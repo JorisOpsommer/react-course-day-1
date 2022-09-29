@@ -1,0 +1,28 @@
+export type MarketData = {
+  ask: number;
+  baseCurrency?: any;
+  bid: number;
+  change1h: number;
+  change24h: number;
+  changeBod: number;
+  enabled: boolean;
+  futureType: string;
+  highLeverageFeeExempt: boolean;
+  isEtfMarket: boolean;
+  largeOrderThreshold: number;
+  last: number;
+  minProvideSize: number;
+  name: string;
+  postOnly: boolean;
+  price: number;
+  priceHigh24h: number;
+  priceIncrement: number;
+  priceLow24h: number;
+  quoteCurrency?: any;
+  quoteVolume24h: number;
+  restricted: boolean;
+  sizeIncrement: number;
+  type: string;
+  underlying: string;
+  volumeUsd24h: number;
+};

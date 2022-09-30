@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getHttpRequest } from "../../api/api-client";
+import HistoricalMarketDataChart from "../../components/charts/HistoricalMarketDataChart";
 import { HistoricalMarketData } from "../../models/historical-market.data";
 import { MarketData } from "../../models/market-data";
-import { getHistoricalData } from "./details-view-functions";
+import { getHistoricalData, mapHistoricalDataToChart } from "./details-view-functions";
 
 export const DetailsView = () => {
   const { id } = useParams();
@@ -38,6 +39,8 @@ export const DetailsView = () => {
     <div>
       <h1>ID: {id}</h1>
       <h2>{coin?.last}$</h2>
+
+      {historicalData && historicalData?.length > 0 && <HistoricalMarketDataChart chartData={mapHistoricalDataToChart(historicalData)} />}
     </div>
   );
 };

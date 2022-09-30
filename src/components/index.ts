@@ -1,3 +1,3 @@
-import List from "./List";
+import List from "./list/List";
 
-export {List};
+export { List };
